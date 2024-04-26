@@ -65,10 +65,15 @@ clean:
 	find . -type d -name '__pycache__' -exec rm -rf {} +
 	@echo "Clean up done."
 
-# run 
-run: install
+# run api
+run-api: install
 	@echo "Running the project..."
-	$(PYTHON) src/main.py
+	$(PYTHON) api.py
+
+# run app
+run-app: install
+	@echo "Running the project..."
+	$(PYTHON) app.py
 
 # Help
 help:
